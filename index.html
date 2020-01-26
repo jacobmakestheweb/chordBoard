@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>synthBoard</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+                            <!--  stylesheet -->
+ 
+    <link rel="stylesheet" href="/style.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+                            <!--  tone js lib  -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.4.9/Tone.js"></script>
+                              <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fascinate|Faster+One&display=swap" rel="stylesheet">
+  
+   
+  </head>
+  <body>   <h1 class="text-center title">
+        chordBoard
+        
+      </h1>
+      
+    <div class ="whole-ui">
+    
+  
+    <div class="container-fluid ">
+     
+      <ul id="piano" class="kb keyboard "> <div class="tog-a">
+        
+<!--         <label class="switch row ">
+  <input type="checkbox">
+  <span class="slider round"></span>
+        </label> -->
+        </div>
+        <li class="tab">&nbsp; &nbsp; 
+            
+          7
+        </li>
+        <li class="letter">
+          <div class="fingerprint-spinner">
+  <div class="spinner-ring ring1"></div>
+  <div class="spinner-ring ring1"></div>
+  <div class="spinner-ring ring1"></div>
+  <div class="spinner-ring ring1"></div>
+  <div class="spinner-ring ring1"></div>
+  <div class="spinner-ring ring1"></div>
+  <div class="spinner-ring ring1"></div>
+  <div class="spinner-ring ring1"></div>
+  <div class="spinner-ring ring1"></div>
+</div>
+        </li>
+        <li class="letter">
+        <div class="fingerprint-spinner">
+  <div class="spinner-ring ring2"></div>
+  <div class="spinner-ring ring2"></div>
+  <div class="spinner-ring ring2"></div>
+  <div class="spinner-ring ring2"></div>
+  <div class="spinner-ring ring2"></div>
+  <div class="spinner-ring ring2"></div>
+  <div class="spinner-ring ring2"></div>
+  <div class="spinner-ring ring2"></div>
+  <div class="spinner-ring ring2"></div>
+</div></li>
+        <li class="letter">
+        <div class="fingerprint-spinner">
+  <div class="spinner-ring ring3"></div>
+  <div class="spinner-ring ring3"></div>
+  <div class="spinner-ring ring3"></div>
+  <div class="spinner-ring ring3"></div>
+  <div class="spinner-ring ring3"></div>
+  <div class="spinner-ring ring3"></div>
+  <div class="spinner-ring ring3"></div>
+  <div class="spinner-ring ring3"></div>
+  <div class="spinner-ring ring3"></div>
+</div></li>
+        <li class="letter">
+        <div class="fingerprint-spinner">
+  <div class="spinner-ring ring4"></div>
+  <div class="spinner-ring ring4"></div>
+  <div class="spinner-ring ring4"></div>
+  <div class="spinner-ring ring4"></div>
+  <div class="spinner-ring ring4"></div>
+  <div class="spinner-ring ring4"></div>
+  <div class="spinner-ring ring4"></div>
+  <div class="spinner-ring ring4"></div>
+  <div class="spinner-ring ring4"></div>
+</div></li>
+        <li class="letter">
+        <div class="fingerprint-spinner">
+  <div class="spinner-ring ring5"></div>
+  <div class="spinner-ring ring5"></div>
+  <div class="spinner-ring ring5"></div>
+  <div class="spinner-ring ring5"></div>
+  <div class="spinner-ring ring5"></div>
+  <div class="spinner-ring ring5"></div>
+  <div class="spinner-ring ring5"></div>
+  <div class="spinner-ring ring5"></div>
+  <div class="spinner-ring ring5"></div>
+  <div class="spinner-ring ring5"></div>
+</div></li>
+        <li class="letter">
+        <div class="fingerprint-spinner">
+  <div class="spinner-ring ring6"></div>
+  <div class="spinner-ring ring6"></div>
+  <div class="spinner-ring ring6"></div>
+  <div class="spinner-ring ring6"></div>
+  <div class="spinner-ring ring6"></div>
+  <div class="spinner-ring ring6"></div>
+  <div class="spinner-ring ring6"></div>
+  <div class="spinner-ring ring6"></div>
+  <div class="spinner-ring ring6"></div>
+</div></li>
+        <li class="letter">
+        <div class="fingerprint-spinner">
+  <div class="spinner-ring ring7"></div>
+  <div class="spinner-ring ring7"></div>
+  <div class="spinner-ring ring7"></div>
+  <div class="spinner-ring ring7"></div>
+  <div class="spinner-ring ring7"></div>
+  <div class="spinner-ring ring7"></div>
+  <div class="spinner-ring ring7"></div>
+  <div class="spinner-ring ring7"></div>
+  <div class="spinner-ring ring7"></div>
+</div></li>
+        <li class="letter">
+        <div class="fingerprint-spinner">
+  <div class="spinner-ring ring8"></div>
+  <div class="spinner-ring ring8" ></div>
+  <div class="spinner-ring ring8"></div>
+  <div class="spinner-ring ring8"></div>
+  <div class="spinner-ring ring8"></div>
+  <div class="spinner-ring ring8"></div>
+  <div class="spinner-ring ring8"></div>
+  <div class="spinner-ring ring8"></div>
+  <div class="spinner-ring ring8"></div>
+</div></li>
+      </ul>
+       <ul class="kb keyboard"><br><br>
+         <div class ="tog-a">
+           
+        
+<!--          <label class="switch row">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label> --></div>
+ 
+        <li class="capslock">&nbsp; &nbsp; 3</li>
+        <li class="letter">
+        <div class="swapping-squares-spinner" :style="spinnerStyle">
+  <div class="square square1"></div>
+  <div class="square square1"></div>
+  <div class="square square1"></div>
+  <div class="square square1"></div>
+</div></li>
+        <li class="letter"><div class="swapping-squares-spinner" :style="spinnerStyle">
+  <div class="square square2"></div>
+  <div class="square square2"></div>
+  <div class="square square2"></div>
+  <div class="square square2"></div>
+</div></li>
+        <li class="letter"><div class="swapping-squares-spinner" :style="spinnerStyle">
+  <div class="square square3"></div>
+  <div class="square square3"></div>
+  <div class="square square3"></div>
+  <div class="square square3"></div>
+</div></li>
+        <li class="letter">
+        <div class="swapping-squares-spinner" :style="spinnerStyle">
+  <div class="square square4"></div>
+  <div class="square square4"></div>
+  <div class="square square4"></div>
+  <div class="square square4"></div>
+</div></li>
+        <li class="letter" >
+        <div class="swapping-squares-spinner" :style="spinnerStyle">
+  <div class="square square5"></div>
+  <div class="square square5"></div>
+  <div class="square square5"></div>
+  <div class="square square5"></div>
+</div></li>
+        <li class="letter">
+          <div class="swapping-squares-spinner" :style="spinnerStyle">
+  <div class="square square6"></div>
+  <div class="square square6"></div>
+  <div class="square square6"></div>
+  <div class="square square6"></div>
+</div></li>
+        <li class="letter">
+        <div class="swapping-squares-spinner" :style="spinnerStyle">
+  <div class="square square7"></div>
+  <div class="square square7"></div>
+  <div class="square square7"></div>
+  <div class="square square7"></div>
+</div></li>
+        <li class="letter">
+        <div class="swapping-squares-spinner" :style="spinnerStyle">
+  <div class="square square8"></div>
+  <div class="square square8"></div>
+  <div class="square square8"></div>
+  <div class="square square8"></div>
+</div></li>
+      </ul>
+         <ul class="kb keyboard">
+           <br><br>
+           <div class = "tog-a">
+             
+           
+<!--          <label class="switch row">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label> --> </div> 
+
+        <li class="left-shift">&nbsp; &nbsp;  R</li>
+        <li class="letter" data-note="C4">
+          <div class="intersecting-circles-spinner">
+            <div class="spinnerBlock">
+              <span class="circle circle1"></span>
+              <span class="circle circle1"></span>
+              <span class="circle circle1"></span>
+              <span class="circle circle1"></span>
+              <span class="circle circle1"></span>
+              <span class="circle circle1"></span>
+              <span class="circle circle1"></span>
+            </div>
+          </div></li>
+        <li class="letter" data-note="D4">
+        <div class="intersecting-circles-spinner">
+  <div class="spinnerBlock">
+    <span class="circle circle2"></span>
+    <span class="circle circle2"></span>
+    <span class="circle circle2"></span>
+    <span class="circle circle2"></span>
+    <span class="circle circle2"></span>
+    <span class="circle circle2"></span>
+    <span class="circle circle2"></span>
+  </div>
+</div></li>
+        <li class="letter" data-note="Eb4">
+        <div class="intersecting-circles-spinner">
+  <div class="spinnerBlock">
+    <span class="circle circle3"></span>
+    <span class="circle circle3"></span>
+    <span class="circle circle3"></span>
+    <span class="circle circle3"></span>
+    <span class="circle circle3"></span>
+    <span class="circle circle3"></span>
+    <span class="circle circle3"></span>
+  </div>
+</div></li>
+        <li class="letter" data-note="F4">
+        <div class="intersecting-circles-spinner">
+  <div class="spinnerBlock">
+    <span class="circle circle4"></span>
+    <span class="circle circle4"></span>
+    <span class="circle circle4"></span>
+    <span class="circle circle4"></span>
+    <span class="circle circle4"></span>
+    <span class="circle circle4"></span>
+    <span class="circle circle4"></span>
+  </div>
+</div></li>
+        <li class="letter" data-note="G4">
+        <div class="intersecting-circles-spinner">
+  <div class="spinnerBlock">
+    <span class="circle circle5"></span>
+    <span class="circle circle5"></span>
+    <span class="circle circle5"></span>
+    <span class="circle circle5"></span>
+    <span class="circle circle5"></span>
+    <span class="circle circle5"></span>
+    <span class="circle circle5"></span>
+  </div>
+</div></li>
+        <li class="letter" data-note="Ab4">
+          <div class="intersecting-circles-spinner">
+  <div class="spinnerBlock">
+    <span class="circle circle6"></span>
+    <span class="circle circle6"></span>
+    <span class="circle circle6"></span>
+    <span class="circle circle6"></span>
+    <span class="circle circle6"></span>
+    <span class="circle circle6"></span>
+    <span class="circle circle6"></span>
+  </div>
+</div></li>
+        <li class="letter" data-note="Bb4">
+        <div class="intersecting-circles-spinner">
+  <div class="spinnerBlock">
+    <span class="circle circle7"></span>
+    <span class="circle circle7"></span>
+    <span class="circle circle7"></span>
+    <span class="circle circle7"></span>
+    <span class="circle circle7"></span>
+    <span class="circle circle7"></span>
+    <span class="circle circle7"></span>
+  </div>
+</div></li>
+        <li class="symbol" data-note="C5">
+        <div class="intersecting-circles-spinner">
+  <div class="spinnerBlock">
+    <span class="circle circle8"></span>
+    <span class="circle circle8"></span>
+    <span class="circle circle8"></span>
+    <span class="circle circle8"></span>
+    <span class="circle circle8"></span>
+    <span class="circle circle8"></span>
+    <span class="circle circle8"></span>
+  </div>
+</div></li>
+      </ul>  
+      
+            
+    
+    </div>
+  
+
+  
+  </div>
+    <!-- glitch button -->
+
+    <!--     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script> -->
+    
+     <!--   js    -->
+      
+    <script src="/script.js" defer></script>
+   
+  </body>
+</html>
